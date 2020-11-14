@@ -1,0 +1,16 @@
+$color1: rosybrown;
+$color2: white;
+
+body{
+  background-color: $color1;
+}
+
+.red-background {
+  background-color: $color2; 
+}
+
+img {
+  display: block;
+  width: 200px;
+  margin-top: 2rem;
+}
