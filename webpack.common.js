@@ -18,9 +18,6 @@ module.exports = {
     path: path.resolve(process.cwd(), "dist"),
     publicPath: "/",
   },
-  devServer: {
-    stats: "errors-only",
-  },
   module: {
   rules: [
       { 
