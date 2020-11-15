@@ -41,12 +41,23 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, 
-          "css-loader", 
+          MiniCssExtractPlugin.loader,
           {
-            loader: "sass-loader",  
+            loader: "css-loader",
             options: {
-              implementation: require("sass"), 
+              import: false,
+              modules: {
+                exportLocalsConvention: "camelCase",
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                localIdentContext: path.resolve(__dirname, 'src'),
+                localIdentHashPrefix: 'my-custom-hash',
+              },
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass"),
             },
           },
         ],
