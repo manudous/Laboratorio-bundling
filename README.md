@@ -1,1 +1,1 @@
-# Laboratorio-bundling
+# Laboratorio-bundling. Webpack.
